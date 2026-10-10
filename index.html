@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Home — PaperBook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#0a0e14; --card:#111823; --card2:#0d141d; --border:#223047; --border-soft:#1a2436;
@@ -14,7 +17,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   line-height:1.55;min-height:100vh;-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   background:radial-gradient(900px 480px at 15% -5%,rgba(88,166,255,.07),transparent 60%),
@@ -32,10 +35,11 @@ body.leaving{overflow:hidden}
 @keyframes wipeIn{from{transform:translateX(-101%)}to{transform:translateX(0)}}
 @keyframes wipeOut{from{transform:translateX(0)}to{transform:translateX(101%)}}
 
-/* entrance choreography */
-.rise{opacity:0;transform:translateY(18px)}
-body.ready .rise{animation:riseIn .6s cubic-bezier(.2,.7,.3,1) forwards}
-@keyframes riseIn{to{opacity:1;transform:none}}
+/* entrance choreography (scroll-triggered) */
+.rise{opacity:0;transform:translateY(22px);transition:opacity .65s cubic-bezier(.2,.7,.3,1),transform .65s cubic-bezier(.2,.7,.3,1)}
+.rise.in{opacity:1;transform:none}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(63,185,80,.4)}50%{box-shadow:0 0 0 7px rgba(63,185,80,0)}}
+.badge.live{animation:pulse 2.2s ease-out infinite}
 
 /* nav */
 nav.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
@@ -121,18 +125,35 @@ td.num{text-align:right;font-weight:700;white-space:nowrap}
 .funnote{margin-top:14px;font-size:12.5px;color:var(--dimmer);display:flex;gap:8px;align-items:flex-start}
 
 /* schedule */
-.gamerow{display:flex;gap:16px;padding:10px 4px;border-bottom:1px solid rgba(26,36,54,.6);font-size:14px}
+.daylabel{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:800;color:var(--text);
+  margin:26px 0 10px;letter-spacing:.09em;text-transform:uppercase}
+.daylabel::before{content:"";width:4px;height:18px;border-radius:2px;
+  background:linear-gradient(180deg,var(--blue),var(--purple))}
+.daylabel:first-of-type{margin-top:6px}
+.today-tag{font-size:10px;font-weight:800;letter-spacing:.1em;color:#06130a;
+  background:var(--green);border-radius:999px;padding:3px 10px}
+.schedcard{margin-bottom:8px;overflow:hidden}
+.schedcard.today{border-color:rgba(63,185,80,.5);box-shadow:0 0 28px rgba(63,185,80,.1)}
+.gamerow{display:flex;align-items:center;gap:16px;padding:14px 10px;
+  border-bottom:1px solid rgba(26,36,54,.6);border-radius:10px;
+  transition:background .2s,transform .2s}
 .gamerow:last-child{border-bottom:none}
-.gt{color:var(--dimmer);min-width:76px;font-variant-numeric:tabular-nums;flex-shrink:0}
-.gm{font-weight:600}
-.sched-date{margin:-6px 0 12px}
-.daylabel{font-size:13px;font-weight:700;color:var(--dim);margin:20px 0 8px;letter-spacing:.05em;text-transform:uppercase}
-.daylabel:first-of-type{margin-top:4px}
-.schedcard{margin-bottom:6px}
-.tlogo{width:24px;height:24px;object-fit:contain;margin-right:8px;vertical-align:-6px}
-.gamerow .tlogo{width:21px;height:21px;margin-right:7px;vertical-align:-5px}
+.gamerow:hover{background:rgba(88,166,255,.06);transform:translateX(5px)}
+.gtime{font-size:12px;font-weight:700;color:var(--dim);background:rgba(255,255,255,.07);
+  padding:6px 11px;border-radius:9px;min-width:82px;text-align:center;
+  font-variant-numeric:tabular-nums;flex-shrink:0;letter-spacing:.02em}
+.gmatch{display:flex;align-items:center;gap:11px;font-size:17px;font-weight:700;letter-spacing:-.01em;flex-wrap:wrap}
+.gmatch .tm{display:inline-flex;align-items:center}
+.gmatch .at{color:var(--dimmer);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.gamerow .tlogo{width:32px;height:32px;margin-right:9px;vertical-align:-9px;
+  transition:transform .2s cubic-bezier(.2,.7,.3,1.4)}
+.gamerow:hover .tlogo{transform:scale(1.18) rotate(-4deg)}
+.tlogo{width:24px;height:24px;object-fit:contain;margin-right:8px;vertical-align:-6px;
+  opacity:0;transform:scale(.75);transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.3,1.4)}
+.tlogo.ld{opacity:1;transform:none}
 .leg .tlogo{width:22px;height:22px;margin-right:7px;vertical-align:-5px}
 td .tlogo{width:20px;height:20px;margin-right:6px;vertical-align:-4px}
+.feed-item .tlogo{width:20px;height:20px;margin-right:2px;vertical-align:-4px}
 
 /* feed */
 .feed-item{display:flex;align-items:center;gap:14px;padding:13px 4px;border-bottom:1px solid rgba(26,36,54,.6)}
@@ -140,6 +161,28 @@ td .tlogo{width:20px;height:20px;margin-right:6px;vertical-align:-4px}
 .feed-item .fd{font-size:12.5px;color:var(--dimmer);white-space:nowrap;width:86px}
 .feed-item .fb{flex:1;font-size:14px}
 .feed-item .fp{font-weight:700;white-space:nowrap}
+
+/* password gate */
+#gate{position:fixed;inset:0;z-index:200;background:rgba(7,10,16,.94);backdrop-filter:blur(12px);
+  display:flex;align-items:center;justify-content:center;transition:opacity .45s}
+#gate.open{opacity:0;pointer-events:none}
+.gate-card{text-align:center;padding:44px 36px;max-width:360px;width:calc(100% - 40px);
+  background:var(--card);border:1px solid var(--border);border-radius:18px;
+  box-shadow:0 24px 64px rgba(0,0,0,.5)}
+.gate-brand{font-weight:800;font-size:26px;letter-spacing:.02em;margin-bottom:10px}
+.gate-brand em{font-style:normal;color:var(--green)}
+.gate-sub{color:var(--dim);font-size:14px;margin-bottom:22px;line-height:1.6}
+#gate-input{width:100%;padding:13px 16px;border-radius:11px;border:1px solid var(--border);
+  background:var(--card2);color:var(--text);font-size:15px;margin-bottom:12px;outline:none;
+  transition:border-color .2s}
+#gate-input:focus{border-color:var(--blue)}
+#gate-btn{width:100%;padding:13px;border-radius:11px;border:none;background:var(--green);
+  color:#06130a;font-weight:800;font-size:15px;cursor:pointer;transition:filter .2s,transform .15s}
+#gate-btn:hover{filter:brightness(1.08)}
+#gate-btn:active{transform:scale(.98)}
+#gate-err{color:var(--red);font-size:13px;min-height:22px;margin-top:10px}
+#gate.shake .gate-card{animation:gshake .4s}
+@keyframes gshake{0%,100%{transform:translateX(0)}25%{transform:translateX(-9px)}75%{transform:translateX(9px)}}
 
 /* footer */
 footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--border-soft);
@@ -152,6 +195,45 @@ footer p{margin-bottom:10px;max-width:760px}
 </style>
 </head>
 <body>
+<div id="gate">
+  <div class="gate-card">
+    <div class="gate-brand">PAPER<em>BOOK</em></div>
+    <p class="gate-sub">This is a private project.<br>Enter the password to continue.</p>
+    <input id="gate-input" type="password" placeholder="Password" autocomplete="off" spellcheck="false">
+    <button id="gate-btn">Unlock</button>
+    <p id="gate-err"></p>
+  </div>
+</div>
+<script>
+(function(){
+  var HASH="6f3808b3c061007bcaf7c2b59764b31a3e7ae6d838134a733600059c03dc6bd5";
+  var gate=document.getElementById('gate');
+  try{
+    if(sessionStorage.getItem('pb_auth')==='1'){gate.remove();window.__unlocked=true;return;}
+  }catch(e){}
+  window.__unlocked=false;
+  function sha(t){return crypto.subtle.digest('SHA-256',new TextEncoder().encode(t)).then(function(b){
+    return Array.prototype.map.call(new Uint8Array(b),function(x){return ('0'+x.toString(16)).slice(-2)}).join('');});}
+  function tryUnlock(){
+    var v=document.getElementById('gate-input').value;
+    sha(v).then(function(h){
+      if(h===HASH){
+        try{sessionStorage.setItem('pb_auth','1');}catch(e){}
+        gate.classList.add('open');
+        setTimeout(function(){gate.remove();},480);
+        window.__unlocked=true;
+        if(window.__startEntrance)window.__startEntrance();
+      }else{
+        document.getElementById('gate-err').textContent='Wrong password \u2014 try again.';
+        gate.classList.remove('shake');void gate.offsetWidth;gate.classList.add('shake');
+      }
+    });
+  }
+  document.getElementById('gate-btn').addEventListener('click',tryUnlock);
+  document.getElementById('gate-input').addEventListener('keydown',function(e){if(e.key==='Enter')tryUnlock();});
+  setTimeout(function(){var i=document.getElementById('gate-input');if(i)i.focus();},150);
+})();
+</script>
 <div id="wipe"><span>PaperBook</span></div>
 <nav class="top"><div class="inner"><a class="brand" data-nav href="index.html">PAPER<em>BOOK</em></a><a class="nl active" data-nav href="index.html">Home</a><a class="nl" data-nav href="nfl.html">NFL</a><a class="nl" data-nav href="cfb.html">College Football</a><a class="nl" data-nav href="nhl.html">NHL</a><a class="nl" data-nav href="nba.html">NBA</a><a class="nl" data-nav href="ncaab.html">College Basketball</a><a class="nl" data-nav href="soccer.html">Soccer</a></div></nav>
 <div class="wrap">
@@ -206,32 +288,32 @@ footer p{margin-bottom:10px;max-width:760px}
 <div class="card rise"><div class="feed-item">
           <span class="fd">2026-10-09</span>
           <span class="badge lost">LOST</span>
-          <span class="fb"><img class="tlogo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/23.png" alt="" loading="lazy" onerror="this.remove()">CFB · San Jose State -4.5 <span class="dim">(San Jose State vs Wyoming)</span></span>
+          <span class="fb"><img class="tlogo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/23.png" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.remove()">CFB · San Jose State -4.5 <span class="dim">(San Jose State vs Wyoming)</span></span>
           <span class="fp neg">-$50.00</span>
         </div><div class="feed-item">
           <span class="fd">2026-10-09</span>
           <span class="badge won">WON</span>
-          <span class="fb"><img class="tlogo" src="https://a.espncdn.com/i/teamlogos/nhl/500/ana.png" alt="" loading="lazy" onerror="this.remove()">NHL · Ducks ML <span class="dim">(Anaheim Ducks at Winnipeg Jets)</span></span>
+          <span class="fb"><img class="tlogo" src="https://a.espncdn.com/i/teamlogos/nhl/500/ana.png" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.remove()">NHL · Ducks ML <span class="dim">(Anaheim Ducks at Winnipeg Jets)</span></span>
           <span class="fp pos">+$52.50</span>
         </div><div class="feed-item">
           <span class="fd">2026-10-09</span>
           <span class="badge lost">LOST</span>
-          <span class="fb"><img class="tlogo" src="https://a.espncdn.com/i/teamlogos/nhl/500/pit.png" alt="" loading="lazy" onerror="this.remove()">NHL · Penguins ML <span class="dim">(Pittsburgh Penguins at Columbus Blue Jackets)</span></span>
+          <span class="fb"><img class="tlogo" src="https://a.espncdn.com/i/teamlogos/nhl/500/pit.png" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.remove()">NHL · Penguins ML <span class="dim">(Pittsburgh Penguins at Columbus Blue Jackets)</span></span>
           <span class="fp neg">-$50.00</span>
         </div><div class="feed-item">
           <span class="fd">2026-10-08</span>
           <span class="badge lost">LOST</span>
-          <span class="fb"><img class="tlogo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png" alt="" loading="lazy" onerror="this.remove()">CFB · Missouri State +1.5 <span class="dim">(Missouri State at Western Kentucky)</span></span>
+          <span class="fb"><img class="tlogo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.remove()">CFB · Missouri State +1.5 <span class="dim">(Missouri State at Western Kentucky)</span></span>
           <span class="fp neg">-$50.00</span>
         </div><div class="feed-item">
           <span class="fd">2026-10-07</span>
           <span class="badge lost">LOST</span>
-          <span class="fb"><img class="tlogo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/166.png" alt="" loading="lazy" onerror="this.remove()">CFB · New Mexico State +6.5 <span class="dim">(New Mexico State vs FIU)</span></span>
+          <span class="fb"><img class="tlogo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/166.png" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.remove()">CFB · New Mexico State +6.5 <span class="dim">(New Mexico State vs FIU)</span></span>
           <span class="fp neg">-$50.00</span>
         </div><div class="feed-item">
           <span class="fd">2026-10-07</span>
           <span class="badge won">WON</span>
-          <span class="fb"><img class="tlogo" src="https://a.espncdn.com/i/teamlogos/nhl/500/wpg.png" alt="" loading="lazy" onerror="this.remove()">NHL · Jets ML <span class="dim">(Winnipeg Jets vs Colorado Avalanche)</span></span>
+          <span class="fb"><img class="tlogo" src="https://a.espncdn.com/i/teamlogos/nhl/500/wpg.png" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.remove()">NHL · Jets ML <span class="dim">(Winnipeg Jets vs Colorado Avalanche)</span></span>
           <span class="fp pos">+$83.00</span>
         </div></div>
 
@@ -244,11 +326,14 @@ footer p{margin-bottom:10px;max-width:760px}
 <div class="updated">Last updated 2026-10-10T00:54:04-04:00 ET</div>
 </div>
 <script>
-document.body.classList.add('entering');
-requestAnimationFrame(()=>requestAnimationFrame(()=>{
-  document.body.classList.add('ready');
-  setTimeout(()=>document.body.classList.remove('entering'),600);
-}));
+window.__startEntrance=function(){
+  document.body.classList.add('entering');
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    document.body.classList.add('ready');
+    setTimeout(()=>document.body.classList.remove('entering'),600);
+  }));
+};
+if(window.__unlocked!==false){window.__startEntrance();}
 document.querySelectorAll('a[data-nav]').forEach(a=>{
   a.addEventListener('click',e=>{
     const href=a.getAttribute('href');
@@ -258,9 +343,17 @@ document.querySelectorAll('a[data-nav]').forEach(a=>{
     setTimeout(()=>{location.href=href},400);
   });
 });
-document.querySelectorAll('.rise').forEach((el,i)=>{
-  el.style.animationDelay=Math.min(i*70,560)+'ms';
-});
+const __io=new IntersectionObserver(es=>{es.forEach(e=>{
+  if(e.isIntersecting){
+    const el=e.target;
+    const all=document.querySelectorAll('.rise');
+    el.style.transitionDelay=((Array.prototype.indexOf.call(all,el)%5)*55)+'ms';
+    el.classList.add('in');
+    setTimeout(()=>{el.style.transitionDelay='0ms';},900);
+    __io.unobserve(el);
+  }
+});},{threshold:.06,rootMargin:'0px 0px -4% 0px'});
+document.querySelectorAll('.rise').forEach(el=>__io.observe(el));
 document.querySelectorAll('[data-countup]').forEach(el=>{
   const target=parseFloat(el.getAttribute('data-countup'));
   const prefix=el.getAttribute('data-prefix')||'';
