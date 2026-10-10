@@ -25,7 +25,9 @@
     }
    ],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#F74902",
+   "home_color": "#FFB81C"
   },
   {
    "id": "nhl-2026-10-10-canucks-at-devils",
@@ -51,7 +53,9 @@
     }
    ],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#2E6BD8",
+   "home_color": "#CE1126"
   },
   {
    "id": "nhl-2026-10-10-oilers-at-sharks",
@@ -68,7 +72,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#FF4C00",
+   "home_color": "#0ABAB5"
   },
   {
    "id": "nhl-2026-10-10-blue-jackets-at-blues",
@@ -94,7 +100,9 @@
     }
    ],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#2E5AAC",
+   "home_color": "#3B7DED"
   },
   {
    "id": "nhl-2026-10-10-mammoth-at-sabres",
@@ -111,7 +119,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#69A8D8",
+   "home_color": "#2E5AAC"
   },
   {
    "id": "nhl-2026-10-10-stars-at-penguins",
@@ -128,7 +138,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#00A86B",
+   "home_color": "#FCB514"
   },
   {
    "id": "nhl-2026-10-10-lightning-at-islanders",
@@ -145,7 +157,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#2E7DE0",
+   "home_color": "#FC4C02"
   },
   {
    "id": "nhl-2026-10-10-ducks-at-flames",
@@ -171,7 +185,9 @@
     }
    ],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#F47A38",
+   "home_color": "#E63946"
   },
   {
    "id": "nhl-2026-10-10-kings-at-golden-knights",
@@ -197,7 +213,9 @@
     }
    ],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#A2AAAD",
+   "home_color": "#B4975A"
   },
   {
    "id": "nhl-2026-10-11-kraken-at-capitals",
@@ -214,7 +232,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#68A2B9",
+   "home_color": "#E63946"
   },
   {
    "id": "nhl-2026-10-11-canucks-at-rangers",
@@ -231,7 +251,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#2E6BD8",
+   "home_color": "#3B7DED"
   },
   {
    "id": "nhl-2026-10-12-panthers-at-sabres",
@@ -248,7 +270,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#C8102E",
+   "home_color": "#2E5AAC"
   },
   {
    "id": "nhl-2026-10-12-wild-at-golden-knights",
@@ -265,7 +289,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#3D9B5F",
+   "home_color": "#B4975A"
   },
   {
    "id": "nhl-2026-10-13-devils-at-red-wings",
@@ -282,7 +308,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#CE1126",
+   "home_color": "#D52B3A"
   },
   {
    "id": "nhl-2026-10-13-sabres-at-canadiens",
@@ -299,7 +327,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#2E5AAC",
+   "home_color": "#D62839"
   },
   {
    "id": "nhl-2026-10-13-hurricanes-at-capitals",
@@ -316,7 +346,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#FF3B3B",
+   "home_color": "#E63946"
   },
   {
    "id": "nhl-2026-10-13-canucks-at-islanders",
@@ -333,7 +365,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#2E6BD8",
+   "home_color": "#FC4C02"
   },
   {
    "id": "nhl-2026-10-13-avalanche-at-stars",
@@ -350,7 +384,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#B03A5B",
+   "home_color": "#00A86B"
   },
   {
    "id": "nhl-2026-10-13-flames-at-ducks",
@@ -367,7 +403,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#E63946",
+   "home_color": "#F47A38"
   },
   {
    "id": "nhl-2026-10-13-bruins-at-sharks",
@@ -384,7 +422,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#FFB81C",
+   "home_color": "#0ABAB5"
   },
   {
    "id": "nhl-2026-10-15-sabres-at-maple-leafs",
@@ -401,7 +441,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#2E5AAC",
+   "home_color": "#2E6BD8"
   },
   {
    "id": "nhl-2026-10-15-canucks-at-panthers",
@@ -418,7 +460,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#2E6BD8",
+   "home_color": "#C8102E"
   },
   {
    "id": "nhl-2026-10-15-flyers-at-red-wings",
@@ -435,7 +479,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#F74902",
+   "home_color": "#D52B3A"
   },
   {
    "id": "nhl-2026-10-15-flames-at-golden-knights",
@@ -452,7 +498,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#E63946",
+   "home_color": "#B4975A"
   },
   {
    "id": "nhl-2026-10-16-bruins-at-ducks",
@@ -469,7 +517,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#FFB81C",
+   "home_color": "#F47A38"
   },
   {
    "id": "nfl-2026-10-11-eagles-at-jaguars",
@@ -506,7 +556,9 @@
      "t": "2026-10-09",
      "text": "Saquon Barkley (hamstring), DeVonta Smith (hamstring) and Dallas Goedert (knee) all questionable for Philadelphia; line moved from JAX -4.5 to -7."
     }
-   ]
+   ],
+   "away_color": "#007A74",
+   "home_color": "#1493B5"
   },
   {
    "id": "nfl-2026-10-11-dolphins-at-bengals",
@@ -523,7 +575,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#008E97",
+   "home_color": "#FB4F14"
   },
   {
    "id": "nfl-2026-10-11-raiders-at-patriots",
@@ -546,7 +600,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#A5ACAF",
+   "home_color": "#2F5FB3"
   },
   {
    "id": "nfl-2026-10-11-vikings-at-saints",
@@ -563,7 +619,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#7C3AED",
+   "home_color": "#D3BC8D"
   },
   {
    "id": "nfl-2026-10-11-browns-at-jets",
@@ -586,7 +644,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#FF3C00",
+   "home_color": "#3D9B4F"
   },
   {
    "id": "nfl-2026-10-11-colts-at-steelers",
@@ -609,7 +669,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#1E5AA8",
+   "home_color": "#FFB612"
   },
   {
    "id": "nfl-2026-10-11-texans-at-titans",
@@ -632,7 +694,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#3E7CB1",
+   "home_color": "#4B92DB"
   },
   {
    "id": "nfl-2026-10-11-giants-at-commanders",
@@ -655,7 +719,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#1E4FBA",
+   "home_color": "#A6192E"
   },
   {
    "id": "nfl-2026-10-11-bears-at-packers",
@@ -678,7 +744,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#C83803",
+   "home_color": "#2E8B57"
   },
   {
    "id": "nfl-2026-10-11-broncos-at-chargers",
@@ -701,7 +769,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#FB4F14",
+   "home_color": "#0080C6"
   },
   {
    "id": "nfl-2026-10-11-lions-at-cardinals",
@@ -718,7 +788,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#0076B6",
+   "home_color": "#97233F"
   },
   {
    "id": "nfl-2026-10-11-49ers-at-seahawks",
@@ -741,7 +813,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#AA0000",
+   "home_color": "#2E7DC4"
   },
   {
    "id": "nfl-2026-10-11-ravens-at-falcons",
@@ -758,7 +832,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#5A4FCF",
+   "home_color": "#C41E3A"
   },
   {
    "id": "nfl-2026-10-12-bills-at-rams",
@@ -781,7 +857,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#2E7DE0",
+   "home_color": "#2962C4"
   },
   {
    "id": "nfl-2026-10-15-seahawks-at-broncos",
@@ -804,7 +882,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#2E7DC4",
+   "home_color": "#FB4F14"
   },
   {
    "id": "cfb-2026-10-10-buffalo-at-toledo",
@@ -836,7 +916,9 @@
     }
    ],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#1E90D6",
+   "home_color": "#3B8BEB"
   },
   {
    "id": "cfb-2026-10-10-tennessee-at-arkansas",
@@ -859,7 +941,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#FF8200",
+   "home_color": "#B52B42"
   },
   {
    "id": "cfb-2026-10-10-georgia-at-alabama",
@@ -891,7 +975,9 @@
     }
    ],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#C8102E",
+   "home_color": "#B31B34"
   },
   {
    "id": "cfb-2026-10-10-usc-at-penn-state",
@@ -923,7 +1009,9 @@
     }
    ],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#BB1E2D",
+   "home_color": "#3B7DED"
   },
   {
    "id": "cfb-2026-10-10-syracuse-at-virginia",
@@ -955,7 +1043,9 @@
     }
    ],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#D44500",
+   "home_color": "#F84C1E"
   },
   {
    "id": "cfb-2026-10-10-kansas-at-utah",
@@ -987,7 +1077,9 @@
     }
    ],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#2563EB",
+   "home_color": "#D62839"
   },
   {
    "id": "cfb-2026-10-10-boise-state-at-fresno-state",
@@ -1010,7 +1102,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#2F6FED",
+   "home_color": "#DB0032"
   },
   {
    "id": "soccer-2026-10-10-leeds-at-arsenal",
@@ -1042,7 +1136,9 @@
     }
    ],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#FFCD00",
+   "home_color": "#EF0107"
   },
   {
    "id": "soccer-2026-10-10-brentford-at-aston-villa",
@@ -1065,7 +1161,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#E30613",
+   "home_color": "#952545"
   },
   {
    "id": "soccer-2026-10-10-bournemouth-at-chelsea",
@@ -1097,7 +1195,9 @@
     }
    ],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#DA291C",
+   "home_color": "#2563EB"
   },
   {
    "id": "soccer-2026-10-10-fulham-at-ipswich",
@@ -1120,7 +1220,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#EDEDED",
+   "home_color": "#2F6FED"
   },
   {
    "id": "soccer-2026-10-10-brighton-at-sunderland",
@@ -1152,7 +1254,9 @@
     }
    ],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#1E78D6",
+   "home_color": "#EB172B"
   },
   {
    "id": "soccer-2026-10-10-spurs-at-man-united",
@@ -1175,7 +1279,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#5B7FE0",
+   "home_color": "#E92B2B"
   },
   {
    "id": "soccer-2026-10-11-nottm-forest-at-crystal-palace",
@@ -1198,7 +1304,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#C8102E",
+   "home_color": "#D42B3B"
   },
   {
    "id": "soccer-2026-10-11-everton-at-hull",
@@ -1221,7 +1329,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#2F6FED",
+   "home_color": "#F5A800"
   },
   {
    "id": "soccer-2026-10-11-man-city-at-liverpool",
@@ -1244,7 +1354,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#6CABDD",
+   "home_color": "#D00027"
   },
   {
    "id": "soccer-2026-10-12-newcastle-at-coventry",
@@ -1267,7 +1379,9 @@
    "odds": null,
    "history": [],
    "splits": null,
-   "news": []
+   "news": [],
+   "away_color": "#A5ACAF",
+   "home_color": "#059DD9"
   }
  ]
 }
