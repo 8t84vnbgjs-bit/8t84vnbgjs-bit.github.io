@@ -1,218 +1,264 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-<meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<title>Paper Trading Dashboard</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home — PaperBook</title>
 <style>
-  :root { color-scheme: dark; }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #0d1117; color: #e6edf3; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; line-height: 1.5; padding: 24px 16px 64px; }
-  .wrap { max-width: 960px; margin: 0 auto; }
-  header { margin-bottom: 28px; }
-  header h1 { font-size: 28px; margin-bottom: 6px; }
-  header p { color: #8b949e; font-size: 14px; }
-  .disclaimer { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 12px 16px; font-size: 13px; color: #8b949e; margin-bottom: 24px; }
-  .hero { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 32px; }
-  .card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 16px; }
-  .card .k { display: block; font-size: 12px; color: #8b949e; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; }
-  .card .v { font-size: 26px; font-weight: 700; }
-  .pos { color: #3fb950; } .neg { color: #f85149; } .flat { color: #8b949e; }
-  .updated { font-size: 12px; color: #8b949e; margin-bottom: 24px; }
-  h2.section-title { font-size: 20px; margin: 32px 0 12px; padding-bottom: 8px; border-bottom: 1px solid #30363d; }
-  .sport { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 20px; margin-bottom: 16px; }
-  .sport-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-  .sport-head h2 { font-size: 20px; }
-  .badge { font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; letter-spacing: .04em; }
-  .badge.live { background: #1a3a24; color: #3fb950; border: 1px solid #2d5a3a; }
-  .badge.paused { background: #2a2a1a; color: #d29922; border: 1px solid #5a4a2d; }
-  .badge.backtest { background: #1a2a3a; color: #58a6ff; border: 1px solid #2d4a5a; }
-  .badge.won { background: #1a3a24; color: #3fb950; }
-  .badge.lost { background: #3a1a1a; color: #f85149; }
-  .badge.open { background: #1a2a3a; color: #58a6ff; }
-  .badge.push { background: #2a2a2a; color: #8b949e; }
-  .ver { font-size: 12px; color: #8b949e; }
-  .sport-stats { display: flex; gap: 24px; margin-bottom: 8px; }
-  .sport-stats .stat .k { display: block; font-size: 11px; color: #8b949e; text-transform: uppercase; }
-  .sport-stats .stat .v { font-size: 20px; font-weight: 700; }
-  .note { font-size: 13px; color: #8b949e; margin-bottom: 12px; }
-  .sport h3 { font-size: 14px; margin-bottom: 8px; color: #8b949e; text-transform: uppercase; letter-spacing: .05em; }
-  .play { background: #0d1117; border: 1px solid #30363d; border-radius: 8px; padding: 12px 14px; margin-bottom: 8px; }
-  .play-sel { font-weight: 700; font-size: 16px; }
-  .play-meta { font-size: 13px; color: #8b949e; margin-top: 4px; display: flex; gap: 12px; flex-wrap: wrap; }
-  .price { color: #e6edf3; font-weight: 600; }
-  .noplay { font-size: 14px; color: #8b949e; font-style: italic; padding: 8px 0; }
-  table { width: 100%; border-collapse: collapse; font-size: 14px; }
-  th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: #8b949e; padding: 10px 8px; border-bottom: 1px solid #30363d; }
-  td { padding: 10px 8px; border-bottom: 1px solid #21262d; vertical-align: top; }
-  td.num { text-align: right; font-weight: 600; white-space: nowrap; }
-  .dim { color: #8b949e; font-size: 12px; }
-  .table-wrap { overflow-x: auto; background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 8px 12px; }
-  footer { margin-top: 40px; font-size: 12px; color: #8b949e; }
-  footer p { margin-bottom: 8px; }
-  nav.sports-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
-  nav.sports-nav a { color: #58a6ff; text-decoration: none; font-size: 14px; padding: 4px 10px; border: 1px solid #30363d; border-radius: 16px; }
-  nav.sports-nav a:hover { background: #161b22; }
+:root{
+  --bg:#0a0e14; --card:#111823; --card2:#0d141d; --border:#223047; --border-soft:#1a2436;
+  --text:#e8eef7; --dim:#8b98ad; --dimmer:#5c6a82;
+  --green:#3fb950; --red:#f85149; --gold:#d29922; --blue:#58a6ff; --purple:#a371f7;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  line-height:1.55;min-height:100vh;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(900px 480px at 15% -5%,rgba(88,166,255,.07),transparent 60%),
+             radial-gradient(800px 420px at 90% 0%,rgba(63,185,80,.05),transparent 60%)}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px 80px;position:relative;z-index:1}
+
+/* page transition overlay */
+#wipe{position:fixed;inset:0;z-index:100;pointer-events:none;
+  background:linear-gradient(135deg,#0d1522,#131f31);
+  transform:translateX(-101%);display:flex;align-items:center;justify-content:center}
+#wipe span{font-weight:800;letter-spacing:.35em;font-size:13px;color:var(--dim);text-transform:uppercase}
+body.leaving #wipe{animation:wipeIn .38s cubic-bezier(.7,0,.3,1) forwards}
+body.entering #wipe{animation:wipeOut .5s cubic-bezier(.7,0,.3,1) .05s forwards}
+body.leaving{overflow:hidden}
+@keyframes wipeIn{from{transform:translateX(-101%)}to{transform:translateX(0)}}
+@keyframes wipeOut{from{transform:translateX(0)}to{transform:translateX(101%)}}
+
+/* entrance choreography */
+.rise{opacity:0;transform:translateY(18px)}
+body.ready .rise{animation:riseIn .6s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes riseIn{to{opacity:1;transform:none}}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+  background:rgba(10,14,20,.78);border-bottom:1px solid var(--border-soft)}
+nav.top .inner{max-width:1020px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:16px;letter-spacing:.02em;margin-right:14px;color:var(--text);text-decoration:none}
+.brand em{font-style:normal;color:var(--green)}
+nav.top a.nl{color:var(--dim);text-decoration:none;font-size:13.5px;font-weight:600;
+  padding:7px 12px;border-radius:9px;transition:all .18s}
+nav.top a.nl:hover{color:var(--text);background:rgba(255,255,255,.06)}
+nav.top a.nl.active{color:var(--text);background:rgba(88,166,255,.14)}
+
+/* hero */
+.hero{padding:56px 0 10px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--dimmer);margin-bottom:14px}
+.hero h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.hero .sub{color:var(--dim);font-size:15px;max-width:640px;margin:0 auto}
+.pnl-hero{margin:30px auto 6px;display:inline-block;position:relative}
+.pnl-big{font-size:clamp(52px,9vw,84px);font-weight:800;letter-spacing:-.03em;line-height:1;
+  text-shadow:0 0 60px rgba(63,185,80,.25)}
+.pnl-big.pos{color:var(--green)} .pnl-big.neg{color:var(--red)} .pnl-big.flat{color:var(--dim)}
+.rec-pill{display:inline-flex;align-items:center;gap:10px;margin-top:14px;
+  background:var(--card);border:1px solid var(--border);border-radius:999px;padding:8px 18px;font-size:14px}
+.rec-pill b{font-size:16px}
+
+/* sections */
+h2.st{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--dimmer);
+  margin:44px 0 16px;display:flex;align-items:center;gap:12px}
+h2.st::after{content:"";flex:1;height:1px;background:var(--border-soft)}
+.card{background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--border-soft);border-radius:var(--radius);padding:22px;
+  transition:transform .2s,border-color .2s,box-shadow .2s}
+a.cardlink{text-decoration:none;color:inherit;display:block}
+a.cardlink .card:hover{transform:translateY(-3px);border-color:var(--border);
+  box-shadow:0 12px 32px rgba(0,0,0,.35)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.sportcard-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.sportcard-top h3{font-size:19px;font-weight:750}
+.mini-stats{display:flex;gap:22px}
+.mini-stats .ms .k{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--dimmer)}
+.mini-stats .ms .v{font-size:21px;font-weight:750}
+.pos{color:var(--green)} .neg{color:var(--red)} .flat{color:var(--dim)}
+
+.badge{font-size:10.5px;font-weight:750;padding:4px 11px;border-radius:999px;letter-spacing:.07em;text-transform:uppercase}
+.badge.live{background:rgba(63,185,80,.13);color:var(--green);border:1px solid rgba(63,185,80,.35)}
+.badge.paused{background:rgba(210,153,34,.12);color:var(--gold);border:1px solid rgba(210,153,34,.35)}
+.badge.won{background:rgba(63,185,80,.13);color:var(--green)}
+.badge.lost{background:rgba(248,81,73,.12);color:var(--red)}
+.badge.open{background:rgba(88,166,255,.13);color:var(--blue)}
+.badge.fun{background:rgba(210,153,34,.12);color:var(--gold);border:1px solid rgba(210,153,34,.35)}
+.badge.model{background:rgba(163,113,247,.13);color:var(--purple);border:1px solid rgba(163,113,247,.35)}
+
+/* model play */
+.model-play{display:flex;gap:18px;align-items:flex-start}
+.model-play .sel{font-size:22px;font-weight:750;margin:6px 0 4px}
+.model-play .meta{color:var(--dim);font-size:14px}
+.model-play .meta b{color:var(--text)}
+.nothing{color:var(--dim);font-style:italic;padding:6px 0}
+
+/* table */
+.twrap{overflow-x:auto;border:1px solid var(--border-soft);border-radius:var(--radius);background:var(--card2)}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--dimmer);
+  padding:12px 14px;border-bottom:1px solid var(--border-soft);white-space:nowrap}
+td{padding:12px 14px;border-bottom:1px solid rgba(26,36,54,.6);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tbody tr{transition:background .15s}
+tbody tr:hover{background:rgba(88,166,255,.04)}
+td.num{text-align:right;font-weight:700;white-space:nowrap}
+.dim{color:var(--dimmer);font-size:12.5px}
+
+/* parlay */
+.parlay{border:1px solid rgba(210,153,34,.3);background:linear-gradient(180deg,rgba(210,153,34,.06),var(--card2))}
+.parlay-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.parlay-head h3{font-size:19px;font-weight:750}
+.combined{font-size:26px;font-weight:800;color:var(--gold)}
+.leg{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:12px 4px;border-bottom:1px solid rgba(26,36,54,.7)}
+.leg:last-of-type{border-bottom:none}
+.leg .lp{font-weight:650}
+.leg .lg{font-size:12.5px;color:var(--dimmer)}
+.leg .lo{font-weight:750;color:var(--gold);white-space:nowrap}
+.funnote{margin-top:14px;font-size:12.5px;color:var(--dimmer);display:flex;gap:8px;align-items:flex-start}
+
+/* feed */
+.feed-item{display:flex;align-items:center;gap:14px;padding:13px 4px;border-bottom:1px solid rgba(26,36,54,.6)}
+.feed-item:last-child{border-bottom:none}
+.feed-item .fd{font-size:12.5px;color:var(--dimmer);white-space:nowrap;width:86px}
+.feed-item .fb{flex:1;font-size:14px}
+.feed-item .fp{font-weight:700;white-space:nowrap}
+
+/* footer */
+footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--border-soft);
+  font-size:12.5px;color:var(--dimmer)}
+footer p{margin-bottom:10px;max-width:760px}
+.updated{margin-top:26px;font-size:12px;color:var(--dimmer);text-align:center}
+.disc{background:rgba(88,166,255,.06);border:1px solid rgba(88,166,255,.2);border-radius:10px;
+  padding:12px 16px;font-size:13px;color:var(--dim);margin:26px auto 0;max-width:720px;text-align:center}
+@media(max-width:640px){.mini-stats{gap:14px}.hero{padding-top:40px}}
 </style>
 </head>
 <body>
-<div class='wrap'>
-  <header>
-    <h1>Paper Trading Dashboard</h1>
-    <p>Six sports models. Every play paper-traded. Full public record.</p>
-  </header>
-  <div class='disclaimer'>Paper trades only — no real money is wagered. Nothing here is financial advice. Models are experimental and tracked publicly for accountability.</div>
-  <div class='hero'>
-    <div class='card'><span class='k'>Total paper P&amp;L</span><span class='v neg'>$-64.50</span></div>
-    <div class='card'><span class='k'>Record</span><span class='v'>2-4</span></div>
-    <div class='card'><span class='k'>Open bets</span><span class='v'>0</span></div>
-    <div class='card'><span class='k'>Models live</span><span class='v'>4/6</span></div>
-  </div>
-  <div class='updated'>Last updated: 2026-10-10T04:36:41-04:00 ET</div>
+<div id="wipe"><span>PaperBook</span></div>
+<nav class="top"><div class="inner"><a class="brand" data-nav href="index.html">PAPER<em>BOOK</em></a><a class="nl active" data-nav href="index.html">Home</a><a class="nl" data-nav href="nfl.html">NFL</a><a class="nl" data-nav href="cfb.html">College Football</a><a class="nl" data-nav href="nhl.html">NHL</a><a class="nl" data-nav href="nba.html">NBA</a><a class="nl" data-nav href="ncaab.html">College Basketball</a><a class="nl" data-nav href="soccer.html">Soccer</a></div></nav>
+<div class="wrap">
 
-  <h2 class='section-title'>Sports</h2>
-  <nav class='sports-nav'><a href='#cfb'>CFB</a><a href='#nba'>NBA</a><a href='#ncaab'>NCAAB</a><a href='#nfl'>NFL</a><a href='#nhl'>NHL</a><a href='#soccer'>Soccer</a></nav>
-  
-    <section class='sport' id='cfb'>
-      <div class='sport-head'>
-        <h2>CFB</h2>
-        <span class='badge live'>LIVE</span>
-        <span class='ver'>v2</span>
-      </div>
-      <div class='sport-stats'>
-        <div class='stat'><span class='k'>Paper P&amp;L</span><span class='v neg'>$-150.00</span></div>
-        <div class='stat'><span class='k'>Record</span><span class='v'>0-3</span></div>
-      </div>
-      <p class='note'>Catalyst-style. No new bets weeks 12+.</p>
-      <h3>Current plays</h3>
-      <div class='noplay'>No plays — the model passes when there's no edge.</div>
-    </section>
-    <section class='sport' id='nba'>
-      <div class='sport-head'>
-        <h2>NBA</h2>
-        <span class='badge paused'>PAUSED</span>
-        <span class='ver'>v2</span>
-      </div>
-      <div class='sport-stats'>
-        <div class='stat'><span class='k'>Paper P&amp;L</span><span class='v flat'>$0.00</span></div>
-        <div class='stat'><span class='k'>Record</span><span class='v'>0-0</span></div>
-      </div>
-      <p class='note'>Live launch Oct 20. Catalyst: injury news.</p>
-      <h3>Current plays</h3>
-      <div class='noplay'>No plays — the model passes when there's no edge.</div>
-    </section>
-    <section class='sport' id='ncaab'>
-      <div class='sport-head'>
-        <h2>NCAAB</h2>
-        <span class='badge paused'>PAUSED</span>
-        <span class='ver'>v2</span>
-      </div>
-      <div class='sport-stats'>
-        <div class='stat'><span class='k'>Paper P&amp;L</span><span class='v flat'>$0.00</span></div>
-        <div class='stat'><span class='k'>Record</span><span class='v'>0-0</span></div>
-      </div>
-      <p class='note'>Tip-off early November.</p>
-      <h3>Current plays</h3>
-      <div class='noplay'>No plays — the model passes when there's no edge.</div>
-    </section>
-    <section class='sport' id='nfl'>
-      <div class='sport-head'>
-        <h2>NFL</h2>
-        <span class='badge live'>LIVE</span>
-        <span class='ver'>v2</span>
-      </div>
-      <div class='sport-stats'>
-        <div class='stat'><span class='k'>Paper P&amp;L</span><span class='v flat'>$0.00</span></div>
-        <div class='stat'><span class='k'>Record</span><span class='v'>0-0</span></div>
-      </div>
-      <p class='note'>Catalyst-style. No new bets weeks 15-18.</p>
-      <h3>Current plays</h3>
-      <div class='noplay'>No plays — the model passes when there's no edge.</div>
-    </section>
-    <section class='sport' id='nhl'>
-      <div class='sport-head'>
-        <h2>NHL</h2>
-        <span class='badge live'>LIVE</span>
-        <span class='ver'>v2</span>
-      </div>
-      <div class='sport-stats'>
-        <div class='stat'><span class='k'>Paper P&amp;L</span><span class='v pos'>+$85.50</span></div>
-        <div class='stat'><span class='k'>Record</span><span class='v'>2-1</span></div>
-      </div>
-      <p class='note'>Catalysts: confirmed goalie changes, rest spots.</p>
-      <h3>Current plays</h3>
-      <div class='noplay'>No plays — the model passes when there's no edge.</div>
-    </section>
-    <section class='sport' id='soccer'>
-      <div class='sport-head'>
-        <h2>Soccer</h2>
-        <span class='badge live'>LIVE</span>
-        <span class='ver'>v2</span>
-      </div>
-      <div class='sport-stats'>
-        <div class='stat'><span class='k'>Paper P&amp;L</span><span class='v flat'>$0.00</span></div>
-        <div class='stat'><span class='k'>Record</span><span class='v'>0-0</span></div>
-      </div>
-      <p class='note'>EPL + UCL. Catalysts: lineups, congestion, motivation.</p>
-      <h3>Current plays</h3>
-      <div class='noplay'>No plays — the model passes when there's no edge.</div>
-    </section>
-
-  <h2 class='section-title'>Paper bet history</h2>
-  <div class='table-wrap'><table>
-    <tr><th>Date</th><th>Sport</th><th>Bet</th><th>Result</th><th style='text-align:right'>P&amp;L</th></tr>
-    
-    <tr>
-      <td>2026-10-09</td>
-      <td>CFB</td>
-      <td>San Jose State vs Wyoming<br><span class='dim'>San Jose State -4.5 -108</span></td>
-      <td><span class='badge lost'>LOST</span></td>
-      <td class='num neg'>$-50.00</td>
-    </tr>
-    <tr>
-      <td>2026-10-09</td>
-      <td>NHL</td>
-      <td>Anaheim Ducks at Winnipeg Jets<br><span class='dim'>Ducks ML +105</span></td>
-      <td><span class='badge won'>WON</span></td>
-      <td class='num pos'>+$52.50</td>
-    </tr>
-    <tr>
-      <td>2026-10-09</td>
-      <td>NHL</td>
-      <td>Pittsburgh Penguins at Columbus Blue Jackets<br><span class='dim'>Penguins ML +100</span></td>
-      <td><span class='badge lost'>LOST</span></td>
-      <td class='num neg'>$-50.00</td>
-    </tr>
-    <tr>
-      <td>2026-10-08</td>
-      <td>CFB</td>
-      <td>Missouri State at Western Kentucky<br><span class='dim'>Missouri State +1.5 -110</span></td>
-      <td><span class='badge lost'>LOST</span></td>
-      <td class='num neg'>$-50.00</td>
-    </tr>
-    <tr>
-      <td>2026-10-07</td>
-      <td>CFB</td>
-      <td>New Mexico State vs FIU<br><span class='dim'>New Mexico State +6.5 -112</span></td>
-      <td><span class='badge lost'>LOST</span></td>
-      <td class='num neg'>$-50.00</td>
-    </tr>
-    <tr>
-      <td>2026-10-07</td>
-      <td>NHL</td>
-      <td>Winnipeg Jets vs Colorado Avalanche<br><span class='dim'>Jets ML +166</span></td>
-      <td><span class='badge won'>WON</span></td>
-      <td class='num pos'>+$83.00</td>
-    </tr>
-  </table></div>
-
-  <footer>
-    <h2 class='section-title'>How this works</h2>
-    <p>Each sport runs a <strong>catalyst-style model (v2)</strong>: the engine produces a fair value, but a bet only happens when there's a named, real-world reason the market price is wrong — a goalie change, an injury, a rest spot — with the engine agreeing on direction. Engine-only disagreements are never bets: walk-forward backtests across all six sports showed they carry no signal against the closing line.</p>
-    <p>Every catalyst bet is tracked toward a mandatory 50-bet review per sport. Stakes are a flat $50 paper per play.</p>
-    <p>Historical cash tickets (Sep–Oct 2026, closed): staked $? — net <span class='neg'>$-66.69</span>.</p>
-    <p style='margin-top:16px'>Built and maintained by Winston. Not financial advice.</p>
-  </footer>
+<div class="hero">
+  <div class="kicker rise">Sports paper trading · updated 4× daily</div>
+  <h1 class="rise">Every model. Every bet.<br>On the record.</h1>
+  <p class="sub rise">Six catalyst-style models, paper-traded at a flat $50 a play. No cherry-picking, no deleted losers — the full ledger is public.</p>
+  <div class="pnl-hero rise"><div class="pnl-big neg" data-countup="-64.5" data-prefix="">$0.00</div></div>
+  <div class="rise"><span class="rec-pill">Overall paper record <b>2-4</b> · 0 open</span></div>
+  <div class="disc rise">Paper trades only — no real money is wagered. Nothing here is financial advice.</div>
 </div>
+<h2 class="st rise">Sports</h2>
+<div class="grid"><a class="cardlink rise" data-nav href="nfl.html"><div class="card">
+          <div class="sportcard-top"><h3>NFL</h3><span class="badge live">LIVE</span></div>
+          <div class="mini-stats">
+            <div class="ms"><span class="k">Paper P&amp;L</span><span class="v flat">$0.00</span></div>
+            <div class="ms"><span class="k">Record</span><span class="v">0-0</span></div>
+          </div>
+        </div></a><a class="cardlink rise" data-nav href="cfb.html"><div class="card">
+          <div class="sportcard-top"><h3>College Football</h3><span class="badge live">LIVE</span></div>
+          <div class="mini-stats">
+            <div class="ms"><span class="k">Paper P&amp;L</span><span class="v neg">-$150.00</span></div>
+            <div class="ms"><span class="k">Record</span><span class="v">0-3</span></div>
+          </div>
+        </div></a><a class="cardlink rise" data-nav href="nhl.html"><div class="card">
+          <div class="sportcard-top"><h3>NHL</h3><span class="badge live">LIVE</span></div>
+          <div class="mini-stats">
+            <div class="ms"><span class="k">Paper P&amp;L</span><span class="v pos">+$85.50</span></div>
+            <div class="ms"><span class="k">Record</span><span class="v">2-1</span></div>
+          </div>
+        </div></a><a class="cardlink rise" data-nav href="nba.html"><div class="card">
+          <div class="sportcard-top"><h3>NBA</h3><span class="badge paused">PAUSED</span></div>
+          <div class="mini-stats">
+            <div class="ms"><span class="k">Paper P&amp;L</span><span class="v flat">$0.00</span></div>
+            <div class="ms"><span class="k">Record</span><span class="v">0-0</span></div>
+          </div>
+        </div></a><a class="cardlink rise" data-nav href="ncaab.html"><div class="card">
+          <div class="sportcard-top"><h3>College Basketball</h3><span class="badge paused">PAUSED</span></div>
+          <div class="mini-stats">
+            <div class="ms"><span class="k">Paper P&amp;L</span><span class="v flat">$0.00</span></div>
+            <div class="ms"><span class="k">Record</span><span class="v">0-0</span></div>
+          </div>
+        </div></a><a class="cardlink rise" data-nav href="soccer.html"><div class="card">
+          <div class="sportcard-top"><h3>Soccer</h3><span class="badge live">LIVE</span></div>
+          <div class="mini-stats">
+            <div class="ms"><span class="k">Paper P&amp;L</span><span class="v flat">$0.00</span></div>
+            <div class="ms"><span class="k">Record</span><span class="v">0-0</span></div>
+          </div>
+        </div></a></div>
+<h2 class="st rise">Recent Results</h2>
+<div class="card rise"><div class="feed-item">
+          <span class="fd">2026-10-09</span>
+          <span class="badge lost">LOST</span>
+          <span class="fb">CFB · San Jose State -4.5 <span class="dim">(San Jose State vs Wyoming)</span></span>
+          <span class="fp neg">-$50.00</span>
+        </div><div class="feed-item">
+          <span class="fd">2026-10-09</span>
+          <span class="badge won">WON</span>
+          <span class="fb">NHL · Ducks ML <span class="dim">(Anaheim Ducks at Winnipeg Jets)</span></span>
+          <span class="fp pos">+$52.50</span>
+        </div><div class="feed-item">
+          <span class="fd">2026-10-09</span>
+          <span class="badge lost">LOST</span>
+          <span class="fb">NHL · Penguins ML <span class="dim">(Pittsburgh Penguins at Columbus Blue Jackets)</span></span>
+          <span class="fp neg">-$50.00</span>
+        </div><div class="feed-item">
+          <span class="fd">2026-10-08</span>
+          <span class="badge lost">LOST</span>
+          <span class="fb">CFB · Missouri State +1.5 <span class="dim">(Missouri State at Western Kentucky)</span></span>
+          <span class="fp neg">-$50.00</span>
+        </div><div class="feed-item">
+          <span class="fd">2026-10-07</span>
+          <span class="badge lost">LOST</span>
+          <span class="fb">CFB · New Mexico State +6.5 <span class="dim">(New Mexico State vs FIU)</span></span>
+          <span class="fp neg">-$50.00</span>
+        </div><div class="feed-item">
+          <span class="fd">2026-10-07</span>
+          <span class="badge won">WON</span>
+          <span class="fb">NHL · Jets ML <span class="dim">(Winnipeg Jets vs Colorado Avalanche)</span></span>
+          <span class="fp pos">+$83.00</span>
+        </div></div>
+
+
+<footer class="rise">
+  <p><b style="color:var(--text)">How this works.</b> Each sport runs a catalyst-style model (v2): the engine produces a fair value, but a bet only happens when there's a named, real-world reason the market price is wrong — a goalie change, an injury, a rest spot — with the engine agreeing on direction. Engine-only disagreements are never bets: walk-forward backtests across all six sports showed they carry no signal against the closing line.</p>
+  <p>Every catalyst bet is tracked toward a mandatory 50-bet review per sport. Stakes are a flat $50 paper per play. Fun parlays are entertainment only — never model plays, always tiny stakes.</p>
+  <p>Paper trades only — no real money is wagered. Nothing here is financial advice.</p>
+</footer>
+<div class="updated">Last updated 2026-10-10T04:36:41-04:00 ET</div>
+</div>
+<script>
+document.body.classList.add('entering');
+requestAnimationFrame(()=>requestAnimationFrame(()=>{
+  document.body.classList.add('ready');
+  setTimeout(()=>document.body.classList.remove('entering'),600);
+}));
+document.querySelectorAll('a[data-nav]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const href=a.getAttribute('href');
+    if(!href||href.startsWith('#'))return;
+    e.preventDefault();
+    document.body.classList.add('leaving');
+    setTimeout(()=>{location.href=href},400);
+  });
+});
+document.querySelectorAll('.rise').forEach((el,i)=>{
+  el.style.animationDelay=Math.min(i*70,560)+'ms';
+});
+document.querySelectorAll('[data-countup]').forEach(el=>{
+  const target=parseFloat(el.getAttribute('data-countup'));
+  const prefix=el.getAttribute('data-prefix')||'';
+  const dur=1100,t0=performance.now();
+  function fmt(v){return prefix+(v<0?'-':'')+'$'+Math.abs(v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+  function tick(t){
+    const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);
+    el.textContent=fmt(target*e);
+    if(p<1)requestAnimationFrame(tick);else el.textContent=fmt(target);
+  }
+  setTimeout(()=>requestAnimationFrame(tick),250);
+});
+</script>
 </body>
 </html>
