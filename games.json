@@ -1,0 +1,1273 @@
+{
+ "updated_at": "2026-10-10T00:54:04-04:00",
+ "games": [
+  {
+   "id": "nhl-2026-10-10-flyers-at-bruins",
+   "sport": "NHL",
+   "away": "Flyers",
+   "home": "Bruins",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "1:00 PM",
+   "venue": "TD Garden",
+   "city": "Boston, MA",
+   "outdoor": false,
+   "weather": null,
+   "odds": {
+    "away_ml": "+116",
+    "home_ml": "-137"
+   },
+   "history": [
+    {
+     "t": "2026-10-10T00:54",
+     "away_ml": "+116",
+     "home_ml": "-137"
+    }
+   ],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-10-canucks-at-devils",
+   "sport": "NHL",
+   "away": "Canucks",
+   "home": "Devils",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "3:30 PM",
+   "venue": "Prudential Center",
+   "city": "Newark, NJ",
+   "outdoor": false,
+   "weather": null,
+   "odds": {
+    "away_ml": "+230",
+    "home_ml": "-285"
+   },
+   "history": [
+    {
+     "t": "2026-10-10T00:54",
+     "away_ml": "+230",
+     "home_ml": "-285"
+    }
+   ],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-10-oilers-at-sharks",
+   "sport": "NHL",
+   "away": "Oilers",
+   "home": "Sharks",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "4:00 PM",
+   "venue": "SAP Center",
+   "city": "San Jose, CA",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-10-blue-jackets-at-blues",
+   "sport": "NHL",
+   "away": "Blue Jackets",
+   "home": "Blues",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "7:00 PM",
+   "venue": "Enterprise Center",
+   "city": "St. Louis, MO",
+   "outdoor": false,
+   "weather": null,
+   "odds": {
+    "away_ml": "+107",
+    "home_ml": "-125"
+   },
+   "history": [
+    {
+     "t": "2026-10-10T00:54",
+     "away_ml": "+107",
+     "home_ml": "-125"
+    }
+   ],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-10-mammoth-at-sabres",
+   "sport": "NHL",
+   "away": "Mammoth",
+   "home": "Sabres",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "7:00 PM",
+   "venue": "KeyBank Center",
+   "city": "Buffalo, NY",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-10-stars-at-penguins",
+   "sport": "NHL",
+   "away": "Stars",
+   "home": "Penguins",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "7:00 PM",
+   "venue": "PPG Paints Arena",
+   "city": "Pittsburgh, PA",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-10-lightning-at-islanders",
+   "sport": "NHL",
+   "away": "Lightning",
+   "home": "Islanders",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "7:30 PM",
+   "venue": "UBS Arena",
+   "city": "Elmont, NY",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-10-ducks-at-flames",
+   "sport": "NHL",
+   "away": "Ducks",
+   "home": "Flames",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "10:00 PM",
+   "venue": "Scotiabank Saddledome",
+   "city": "Calgary, AB",
+   "outdoor": false,
+   "weather": null,
+   "odds": {
+    "away_ml": "-129",
+    "home_ml": "+108"
+   },
+   "history": [
+    {
+     "t": "2026-10-10T00:54",
+     "away_ml": "-129",
+     "home_ml": "+108"
+    }
+   ],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-10-kings-at-golden-knights",
+   "sport": "NHL",
+   "away": "Kings",
+   "home": "Golden Knights",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "10:00 PM",
+   "venue": "T-Mobile Arena",
+   "city": "Paradise, NV",
+   "outdoor": false,
+   "weather": null,
+   "odds": {
+    "away_ml": "+132",
+    "home_ml": "-157"
+   },
+   "history": [
+    {
+     "t": "2026-10-10T00:54",
+     "away_ml": "+132",
+     "home_ml": "-157"
+    }
+   ],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-11-kraken-at-capitals",
+   "sport": "NHL",
+   "away": "Kraken",
+   "home": "Capitals",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "5:00 PM",
+   "venue": "Capital One Arena",
+   "city": "Washington, DC",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-11-canucks-at-rangers",
+   "sport": "NHL",
+   "away": "Canucks",
+   "home": "Rangers",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "6:00 PM",
+   "venue": "Madison Square Garden",
+   "city": "New York, NY",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-12-panthers-at-sabres",
+   "sport": "NHL",
+   "away": "Panthers",
+   "home": "Sabres",
+   "date": "2026-10-12",
+   "date_label": "Monday, October 12",
+   "time": "1:00 PM",
+   "venue": "KeyBank Center",
+   "city": "Buffalo, NY",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-12-wild-at-golden-knights",
+   "sport": "NHL",
+   "away": "Wild",
+   "home": "Golden Knights",
+   "date": "2026-10-12",
+   "date_label": "Monday, October 12",
+   "time": "8:00 PM",
+   "venue": "T-Mobile Arena",
+   "city": "Paradise, NV",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-13-devils-at-red-wings",
+   "sport": "NHL",
+   "away": "Devils",
+   "home": "Red Wings",
+   "date": "2026-10-13",
+   "date_label": "Tuesday, October 13",
+   "time": "6:00 PM",
+   "venue": "Little Caesars Arena",
+   "city": "Detroit, MI",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-13-sabres-at-canadiens",
+   "sport": "NHL",
+   "away": "Sabres",
+   "home": "Canadiens",
+   "date": "2026-10-13",
+   "date_label": "Tuesday, October 13",
+   "time": "6:30 PM",
+   "venue": "Bell Centre",
+   "city": "Montreal, QC",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-13-hurricanes-at-capitals",
+   "sport": "NHL",
+   "away": "Hurricanes",
+   "home": "Capitals",
+   "date": "2026-10-13",
+   "date_label": "Tuesday, October 13",
+   "time": "6:45 PM",
+   "venue": "Capital One Arena",
+   "city": "Washington, DC",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-13-canucks-at-islanders",
+   "sport": "NHL",
+   "away": "Canucks",
+   "home": "Islanders",
+   "date": "2026-10-13",
+   "date_label": "Tuesday, October 13",
+   "time": "7:45 PM",
+   "venue": "UBS Arena",
+   "city": "Elmont, NY",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-13-avalanche-at-stars",
+   "sport": "NHL",
+   "away": "Avalanche",
+   "home": "Stars",
+   "date": "2026-10-13",
+   "date_label": "Tuesday, October 13",
+   "time": "8:30 PM",
+   "venue": "American Airlines Center",
+   "city": "Dallas, TX",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-13-flames-at-ducks",
+   "sport": "NHL",
+   "away": "Flames",
+   "home": "Ducks",
+   "date": "2026-10-13",
+   "date_label": "Tuesday, October 13",
+   "time": "9:45 PM",
+   "venue": "Honda Center",
+   "city": "Anaheim, CA",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-13-bruins-at-sharks",
+   "sport": "NHL",
+   "away": "Bruins",
+   "home": "Sharks",
+   "date": "2026-10-13",
+   "date_label": "Tuesday, October 13",
+   "time": "11:00 PM",
+   "venue": "SAP Center",
+   "city": "San Jose, CA",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-15-sabres-at-maple-leafs",
+   "sport": "NHL",
+   "away": "Sabres",
+   "home": "Maple Leafs",
+   "date": "2026-10-15",
+   "date_label": "Thursday, October 15",
+   "time": "7:00 PM",
+   "venue": "Scotiabank Arena",
+   "city": "Toronto, ON",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-15-canucks-at-panthers",
+   "sport": "NHL",
+   "away": "Canucks",
+   "home": "Panthers",
+   "date": "2026-10-15",
+   "date_label": "Thursday, October 15",
+   "time": "7:00 PM",
+   "venue": "Amerant Bank Arena",
+   "city": "Sunrise, FL",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-15-flyers-at-red-wings",
+   "sport": "NHL",
+   "away": "Flyers",
+   "home": "Red Wings",
+   "date": "2026-10-15",
+   "date_label": "Thursday, October 15",
+   "time": "7:30 PM",
+   "venue": "Little Caesars Arena",
+   "city": "Detroit, MI",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-15-flames-at-golden-knights",
+   "sport": "NHL",
+   "away": "Flames",
+   "home": "Golden Knights",
+   "date": "2026-10-15",
+   "date_label": "Thursday, October 15",
+   "time": "10:00 PM",
+   "venue": "T-Mobile Arena",
+   "city": "Paradise, NV",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nhl-2026-10-16-bruins-at-ducks",
+   "sport": "NHL",
+   "away": "Bruins",
+   "home": "Ducks",
+   "date": "2026-10-16",
+   "date_label": "Friday, October 16",
+   "time": "TBD",
+   "venue": "Honda Center",
+   "city": "Anaheim, CA",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nfl-2026-10-11-eagles-at-jaguars",
+   "sport": "NFL",
+   "away": "Eagles",
+   "home": "Jaguars",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "9:30 AM",
+   "venue": "Tottenham Hotspur Stadium",
+   "city": "London, England",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 59,
+    "condition": "Partly cloudy",
+    "wind_mph": 6,
+    "precip_pct": 0,
+    "for_time": "2026-10-11T09:00"
+   },
+   "odds": {
+    "away_ml": "+280",
+    "home_ml": "-355"
+   },
+   "history": [
+    {
+     "t": "2026-10-10T00:54",
+     "away_ml": "+280",
+     "home_ml": "-355"
+    }
+   ],
+   "splits": null,
+   "news": [
+    {
+     "t": "2026-10-09",
+     "text": "Saquon Barkley (hamstring), DeVonta Smith (hamstring) and Dallas Goedert (knee) all questionable for Philadelphia; line moved from JAX -4.5 to -7."
+    }
+   ]
+  },
+  {
+   "id": "nfl-2026-10-11-dolphins-at-bengals",
+   "sport": "NFL",
+   "away": "Dolphins",
+   "home": "Bengals",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "1:00 PM",
+   "venue": null,
+   "city": null,
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nfl-2026-10-11-raiders-at-patriots",
+   "sport": "NFL",
+   "away": "Raiders",
+   "home": "Patriots",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "1:00 PM",
+   "venue": "Gillette Stadium",
+   "city": "Foxborough, MA",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 65,
+    "condition": "Overcast",
+    "wind_mph": 10,
+    "precip_pct": 0,
+    "for_time": "2026-10-11T13:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nfl-2026-10-11-vikings-at-saints",
+   "sport": "NFL",
+   "away": "Vikings",
+   "home": "Saints",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "1:00 PM",
+   "venue": "Caesars Superdome",
+   "city": "New Orleans, LA",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nfl-2026-10-11-browns-at-jets",
+   "sport": "NFL",
+   "away": "Browns",
+   "home": "Jets",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "1:00 PM",
+   "venue": "MetLife Stadium",
+   "city": "East Rutherford, NJ",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 71,
+    "condition": "Overcast",
+    "wind_mph": 14,
+    "precip_pct": 61,
+    "for_time": "2026-10-11T13:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nfl-2026-10-11-colts-at-steelers",
+   "sport": "NFL",
+   "away": "Colts",
+   "home": "Steelers",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "1:00 PM",
+   "venue": "Acrisure Stadium",
+   "city": "Pittsburgh, PA",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 68,
+    "condition": "Heavy drizzle",
+    "wind_mph": 8,
+    "precip_pct": 88,
+    "for_time": "2026-10-11T13:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nfl-2026-10-11-texans-at-titans",
+   "sport": "NFL",
+   "away": "Texans",
+   "home": "Titans",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "1:00 PM",
+   "venue": "Nissan Stadium",
+   "city": "Nashville, TN",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 64,
+    "condition": "Overcast",
+    "wind_mph": 8,
+    "precip_pct": 36,
+    "for_time": "2026-10-11T13:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nfl-2026-10-11-giants-at-commanders",
+   "sport": "NFL",
+   "away": "Giants",
+   "home": "Commanders",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "1:00 PM",
+   "venue": "Northwest Stadium",
+   "city": "Landover, MD",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 67,
+    "condition": "Light rain",
+    "wind_mph": 11,
+    "precip_pct": 98,
+    "for_time": "2026-10-11T13:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nfl-2026-10-11-bears-at-packers",
+   "sport": "NFL",
+   "away": "Bears",
+   "home": "Packers",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "1:00 PM",
+   "venue": "Lambeau Field",
+   "city": "Green Bay, WI",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 75,
+    "condition": "Clear",
+    "wind_mph": 14,
+    "precip_pct": 0,
+    "for_time": "2026-10-11T13:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nfl-2026-10-11-broncos-at-chargers",
+   "sport": "NFL",
+   "away": "Broncos",
+   "home": "Chargers",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "4:05 PM",
+   "venue": "SoFi Stadium",
+   "city": "Inglewood, CA",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 67,
+    "condition": "Overcast",
+    "wind_mph": 10,
+    "precip_pct": 36,
+    "for_time": "2026-10-11T16:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nfl-2026-10-11-lions-at-cardinals",
+   "sport": "NFL",
+   "away": "Lions",
+   "home": "Cardinals",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "4:25 PM",
+   "venue": "State Farm Stadium",
+   "city": "Glendale, AZ",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nfl-2026-10-11-49ers-at-seahawks",
+   "sport": "NFL",
+   "away": "49ers",
+   "home": "Seahawks",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "4:25 PM",
+   "venue": "Lumen Field",
+   "city": "Seattle, WA",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 60,
+    "condition": "Clear",
+    "wind_mph": 8,
+    "precip_pct": 0,
+    "for_time": "2026-10-11T16:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nfl-2026-10-11-ravens-at-falcons",
+   "sport": "NFL",
+   "away": "Ravens",
+   "home": "Falcons",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "8:20 PM",
+   "venue": "Mercedes-Benz Stadium",
+   "city": "Atlanta, GA",
+   "outdoor": false,
+   "weather": null,
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nfl-2026-10-12-bills-at-rams",
+   "sport": "NFL",
+   "away": "Bills",
+   "home": "Rams",
+   "date": "2026-10-12",
+   "date_label": "Monday, October 12",
+   "time": "8:15 PM",
+   "venue": "SoFi Stadium",
+   "city": "Inglewood, CA",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 67,
+    "condition": "Overcast",
+    "wind_mph": 10,
+    "precip_pct": 53,
+    "for_time": "2026-10-12T20:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "nfl-2026-10-15-seahawks-at-broncos",
+   "sport": "NFL",
+   "away": "Seahawks",
+   "home": "Broncos",
+   "date": "2026-10-15",
+   "date_label": "Thursday, October 15",
+   "time": "8:15 PM",
+   "venue": "Empower Field",
+   "city": "Denver, CO",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 66,
+    "condition": "Overcast",
+    "wind_mph": 10,
+    "precip_pct": 10,
+    "for_time": "2026-10-15T20:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "cfb-2026-10-10-buffalo-at-toledo",
+   "sport": "CFB",
+   "away": "Buffalo",
+   "home": "Toledo",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "3:30 PM",
+   "venue": "Glass Bowl",
+   "city": "Toledo, OH",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 81,
+    "condition": "Overcast",
+    "wind_mph": 10,
+    "precip_pct": 1,
+    "for_time": "2026-10-10T15:00"
+   },
+   "odds": {
+    "away_ml": "+890",
+    "home_ml": "-1695"
+   },
+   "history": [
+    {
+     "t": "2026-10-10T00:54",
+     "away_ml": "+890",
+     "home_ml": "-1695"
+    }
+   ],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "cfb-2026-10-10-tennessee-at-arkansas",
+   "sport": "CFB",
+   "away": "Tennessee",
+   "home": "Arkansas",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "4:15 PM",
+   "venue": "Razorback Stadium",
+   "city": "Fayetteville, AR",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 87,
+    "condition": "Clear",
+    "wind_mph": 5,
+    "precip_pct": 0,
+    "for_time": "2026-10-10T16:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "cfb-2026-10-10-georgia-at-alabama",
+   "sport": "CFB",
+   "away": "Georgia",
+   "home": "Alabama",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "7:30 PM",
+   "venue": "Bryant-Denny Stadium",
+   "city": "Tuscaloosa, AL",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 63,
+    "condition": "Drizzle",
+    "wind_mph": 4,
+    "precip_pct": 21,
+    "for_time": "2026-10-10T19:00"
+   },
+   "odds": {
+    "away_ml": "-105",
+    "home_ml": "-120"
+   },
+   "history": [
+    {
+     "t": "2026-10-10T00:54",
+     "away_ml": "-105",
+     "home_ml": "-120"
+    }
+   ],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "cfb-2026-10-10-usc-at-penn-state",
+   "sport": "CFB",
+   "away": "USC",
+   "home": "Penn State",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "7:30 PM",
+   "venue": "Beaver Stadium",
+   "city": "State College, PA",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 60,
+    "condition": "Overcast",
+    "wind_mph": 4,
+    "precip_pct": 1,
+    "for_time": "2026-10-10T19:00"
+   },
+   "odds": {
+    "away_ml": "+100",
+    "home_ml": "-120"
+   },
+   "history": [
+    {
+     "t": "2026-10-10T00:54",
+     "away_ml": "+100",
+     "home_ml": "-120"
+    }
+   ],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "cfb-2026-10-10-syracuse-at-virginia",
+   "sport": "CFB",
+   "away": "Syracuse",
+   "home": "Virginia",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "7:30 PM",
+   "venue": "Scott Stadium",
+   "city": "Charlottesville, VA",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 66,
+    "condition": "Overcast",
+    "wind_mph": 5,
+    "precip_pct": 26,
+    "for_time": "2026-10-10T19:00"
+   },
+   "odds": {
+    "away_ml": "+280",
+    "home_ml": "-375"
+   },
+   "history": [
+    {
+     "t": "2026-10-10T00:54",
+     "away_ml": "+280",
+     "home_ml": "-375"
+    }
+   ],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "cfb-2026-10-10-kansas-at-utah",
+   "sport": "CFB",
+   "away": "Kansas",
+   "home": "Utah",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "10:15 PM",
+   "venue": "Rice-Eccles Stadium",
+   "city": "Salt Lake City, UT",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 71,
+    "condition": "Overcast",
+    "wind_mph": 19,
+    "precip_pct": 4,
+    "for_time": "2026-10-10T22:00"
+   },
+   "odds": {
+    "away_ml": "+500",
+    "home_ml": "-770"
+   },
+   "history": [
+    {
+     "t": "2026-10-10T00:54",
+     "away_ml": "+500",
+     "home_ml": "-770"
+    }
+   ],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "cfb-2026-10-10-boise-state-at-fresno-state",
+   "sport": "CFB",
+   "away": "Boise State",
+   "home": "Fresno State",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "10:30 PM",
+   "venue": "Valley Children's Stadium",
+   "city": "Fresno, CA",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 76,
+    "condition": "Overcast",
+    "wind_mph": 2,
+    "precip_pct": 4,
+    "for_time": "2026-10-10T22:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "soccer-2026-10-10-leeds-at-arsenal",
+   "sport": "Soccer",
+   "away": "Leeds",
+   "home": "Arsenal",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "7:30 AM",
+   "venue": "Emirates Stadium",
+   "city": "London, England",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 57,
+    "condition": "Overcast",
+    "wind_mph": 10,
+    "precip_pct": 0,
+    "for_time": "2026-10-10T07:00"
+   },
+   "odds": {
+    "away_ml": "+700",
+    "home_ml": "-230"
+   },
+   "history": [
+    {
+     "t": "2026-10-10T00:54",
+     "away_ml": "+700",
+     "home_ml": "-230"
+    }
+   ],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "soccer-2026-10-10-brentford-at-aston-villa",
+   "sport": "Soccer",
+   "away": "Brentford",
+   "home": "Aston Villa",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "10:00 AM",
+   "venue": "Villa Park",
+   "city": "Birmingham, England",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 56,
+    "condition": "Partly cloudy",
+    "wind_mph": 12,
+    "precip_pct": 7,
+    "for_time": "2026-10-10T10:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "soccer-2026-10-10-bournemouth-at-chelsea",
+   "sport": "Soccer",
+   "away": "Bournemouth",
+   "home": "Chelsea",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "10:00 AM",
+   "venue": "Stamford Bridge",
+   "city": "London, England",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 59,
+    "condition": "Overcast",
+    "wind_mph": 12,
+    "precip_pct": 2,
+    "for_time": "2026-10-10T10:00"
+   },
+   "odds": {
+    "away_ml": "+375",
+    "home_ml": "-154"
+   },
+   "history": [
+    {
+     "t": "2026-10-10T00:54",
+     "away_ml": "+375",
+     "home_ml": "-154"
+    }
+   ],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "soccer-2026-10-10-fulham-at-ipswich",
+   "sport": "Soccer",
+   "away": "Fulham",
+   "home": "Ipswich",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "10:00 AM",
+   "venue": "Portman Road",
+   "city": "Ipswich, England",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 58,
+    "condition": "Mostly clear",
+    "wind_mph": 15,
+    "precip_pct": 0,
+    "for_time": "2026-10-10T10:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "soccer-2026-10-10-brighton-at-sunderland",
+   "sport": "Soccer",
+   "away": "Brighton",
+   "home": "Sunderland",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "10:00 AM",
+   "venue": "Stadium of Light",
+   "city": "Sunderland, England",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 54,
+    "condition": "Mostly clear",
+    "wind_mph": 19,
+    "precip_pct": 6,
+    "for_time": "2026-10-10T10:00"
+   },
+   "odds": {
+    "away_ml": "+131",
+    "home_ml": "+205"
+   },
+   "history": [
+    {
+     "t": "2026-10-10T00:54",
+     "away_ml": "+131",
+     "home_ml": "+205"
+    }
+   ],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "soccer-2026-10-10-spurs-at-man-united",
+   "sport": "Soccer",
+   "away": "Spurs",
+   "home": "Man United",
+   "date": "2026-10-10",
+   "date_label": "Saturday, October 10",
+   "time": "12:30 PM",
+   "venue": "Old Trafford",
+   "city": "Manchester, England",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 54,
+    "condition": "Partly cloudy",
+    "wind_mph": 13,
+    "precip_pct": 62,
+    "for_time": "2026-10-10T12:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "soccer-2026-10-11-nottm-forest-at-crystal-palace",
+   "sport": "Soccer",
+   "away": "Nottm Forest",
+   "home": "Crystal Palace",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "9:00 AM",
+   "venue": "Selhurst Park",
+   "city": "London, England",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 59,
+    "condition": "Overcast",
+    "wind_mph": 5,
+    "precip_pct": 0,
+    "for_time": "2026-10-11T09:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "soccer-2026-10-11-everton-at-hull",
+   "sport": "Soccer",
+   "away": "Everton",
+   "home": "Hull",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "9:00 AM",
+   "venue": "MKM Stadium",
+   "city": "Hull, England",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 57,
+    "condition": "Partly cloudy",
+    "wind_mph": 6,
+    "precip_pct": 0,
+    "for_time": "2026-10-11T09:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "soccer-2026-10-11-man-city-at-liverpool",
+   "sport": "Soccer",
+   "away": "Man City",
+   "home": "Liverpool",
+   "date": "2026-10-11",
+   "date_label": "Sunday, October 11",
+   "time": "11:30 AM",
+   "venue": "Anfield",
+   "city": "Liverpool, England",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 57,
+    "condition": "Partly cloudy",
+    "wind_mph": 5,
+    "precip_pct": 4,
+    "for_time": "2026-10-11T11:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  },
+  {
+   "id": "soccer-2026-10-12-newcastle-at-coventry",
+   "sport": "Soccer",
+   "away": "Newcastle",
+   "home": "Coventry",
+   "date": "2026-10-12",
+   "date_label": "Monday, October 12",
+   "time": "3:00 PM",
+   "venue": "CBS Arena",
+   "city": "Coventry, England",
+   "outdoor": true,
+   "weather": {
+    "temp_f": 64,
+    "condition": "Overcast",
+    "wind_mph": 9,
+    "precip_pct": 12,
+    "for_time": "2026-10-12T15:00"
+   },
+   "odds": null,
+   "history": [],
+   "splits": null,
+   "news": []
+  }
+ ]
+}

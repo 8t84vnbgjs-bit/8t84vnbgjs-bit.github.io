@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Detail | PaperBook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;background:#0b0e14;color:#e8ecf1;line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+#gate{position:fixed;inset:0;background:#0b0e14;z-index:100;display:flex;align-items:center;justify-content:center}
+#gate .card{background:#151a24;border:1px solid #2a3242;border-radius:16px;padding:40px;width:340px;text-align:center}
+#gate h2{font-size:1.5rem;font-weight:800;margin-bottom:6px}
+#gate p{color:#8b93a3;font-size:.9rem;margin-bottom:20px}
+#gate input{width:100%;padding:12px;border-radius:10px;border:1px solid #2a3242;background:#0b0e14;color:#e8ecf1;font-size:1rem;margin-bottom:12px;text-align:center}
+#gate button{width:100%;padding:12px;border:none;border-radius:10px;background:#4f8cff;color:#fff;font-weight:700;font-size:1rem;cursor:pointer}
+#gate .err{color:#ff6b6b;font-size:.85rem;margin-top:10px;min-height:20px}
+nav{background:#11151d;border-bottom:1px solid #1e2530;padding:14px 0;position:sticky;top:0;z-index:50}
+nav .wrap{display:flex;align-items:center;gap:26px}
+.brand{font-weight:900;font-size:1.25rem;color:#4f8cff;text-decoration:none;letter-spacing:-.5px}
+nav a.nl{color:#9aa3b2;text-decoration:none;font-weight:600;font-size:.95rem}
+nav a.nl:hover{color:#fff}
+.back{display:inline-block;margin:26px 0 6px;color:#8b93a3;text-decoration:none;font-weight:600;font-size:.95rem}
+.back:hover{color:#fff}
+.ghead{background:#151a24;border:1px solid #232b3a;border-radius:16px;padding:28px;margin-bottom:22px;text-align:center}
+.ghead .teams{display:flex;align-items:center;justify-content:center;gap:22px;margin-bottom:10px}
+.ghead .t{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:130px}
+.ghead .t img{width:64px;height:64px;object-fit:contain}
+.ghead .t b{font-size:1.15rem;font-weight:800}
+.ghead .at{color:#5b6577;font-weight:700;font-size:1rem}
+.ghead .meta{color:#8b93a3;font-size:.95rem}
+.ghead .meta .venue{color:#c6cdd8;font-weight:600}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:22px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+.card{background:#151a24;border:1px solid #232b3a;border-radius:16px;padding:22px}
+.card h3{font-size:.8rem;font-weight:800;letter-spacing:1.5px;color:#8b93a3;margin-bottom:14px;text-transform:uppercase}
+.oddsnow{display:flex;gap:14px;margin-bottom:14px}
+.oddsnow .o{flex:1;background:#0b0e14;border:1px solid #2a3242;border-radius:12px;padding:12px;text-align:center}
+.oddsnow .o .n{font-size:.8rem;color:#8b93a3;font-weight:600}
+.oddsnow .o .v{font-size:1.5rem;font-weight:800}
+#chart{width:100%;height:260px}
+.chart-note{color:#5b6577;font-size:.8rem;margin-top:8px}
+.split{margin-bottom:14px}
+.split .lab{display:flex;justify-content:space-between;font-size:.85rem;font-weight:600;margin-bottom:6px}
+.bar{height:12px;border-radius:6px;background:#0b0e14;display:flex;overflow:hidden}
+.bar .a{background:#4f8cff}
+.bar .b{background:#f5a623}
+.split .pct{display:flex;justify-content:space-between;font-size:.8rem;color:#8b93a3;margin-top:4px}
+.pending{color:#5b6577;font-size:.9rem;font-style:italic}
+.detail-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #1e2530;font-size:.95rem}
+.detail-row:last-child{border-bottom:none}
+.detail-row .k{color:#8b93a3;font-weight:600}
+.detail-row .v{font-weight:700;text-align:right}
+.news-item{padding:12px 0;border-bottom:1px solid #1e2530}
+.news-item:last-child{border-bottom:none}
+.news-item .t{font-size:.78rem;color:#5b6577;font-weight:600;margin-bottom:4px}
+.news-item .x{font-size:.95rem}
+footer{text-align:center;color:#4a5262;font-size:.8rem;padding:30px 0 40px}
+</style>
+</head>
+<body>
+<div id="gate"><div class="card">
+<h2>PaperBook</h2><p>Private project. Enter the password to continue.</p>
+<input type="password" id="gpw" placeholder="Password" autocomplete="off">
+<button onclick="unlock()">Unlock</button>
+<div class="err" id="gerr"></div>
+</div></div>
+
+<nav><div class="wrap">
+<a class="brand" href="index.html">PaperBook</a>
+<a class="nl" href="nfl.html">NFL</a><a class="nl" href="cfb.html">CFB</a>
+<a class="nl" href="nhl.html">NHL</a><a class="nl" href="nba.html">NBA</a>
+<a class="nl" href="ncaab.html">NCAAB</a><a class="nl" href="soccer.html">Soccer</a>
+</div></nav>
+
+<div class="wrap">
+<a class="back" href="javascript:history.back()">← Back to schedule</a>
+<div id="content"><div class="card"><p class="pending">Loading game…</p></div></div>
+</div>
+<footer>Paper trading dashboard · Not financial advice</footer>
+
+<script>
+var HASH="6f3808b3c061007bcaf7c2b59764b31a3e7ae6d838134a733600059c03dc6bd5";
+async function sha(s){var b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0")}).join("")}
+async function unlock(){var v=document.getElementById("gpw").value;if(await sha(v)===HASH){sessionStorage.setItem("pb_auth","1");document.getElementById("gate").style.display="none"}else{document.getElementById("gerr").textContent="Wrong password."}}
+document.getElementById("gpw").addEventListener("keydown",function(e){if(e.key==="Enter")unlock()});
+if(sessionStorage.getItem("pb_auth")==="1")document.getElementById("gate").style.display="none";
+
+function logo(t){var n=t.toLowerCase().replace(/[^a-z0-9 ]/g,"").trim().replace(/ +/g,"-");
+var map={"golden-knights":"vegas","maple-leafs":"tor","blue-jackets":"cbj","red-wings":"det","man-united":"man-utd","man-city":"man-city","aston-villa":"aston-villa","crystal-palace":"crystal-palace","fresno-state":"fresno-st","penn-state":"penn-st","san-jose-state":"san-jose-st","new-mexico-state":"new-mexico-st","missouri-state":"missouri-st","ohio-state":"ohio-st","washington-state":"washington-st"};
+var s=map[n]||n.split("-").map(function(w){return w[0]}).join("");
+return "https://a.espncdn.com/i/teamlogos/default-team-logo-500.png\" data-fb=\"https://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/"+s+".png&h=100";}
+function espnLogo(t,sport){var id={"NFL":{"bears":3,"bengals":4,"bills":2,"broncos":7,"browns":5,"buccaneers":27,"cardinals":22,"chargers":24,"chiefs":12,"colts":11,"commanders":19,"cowboys":6,"dolphins":15,"eagles":21,"falcons":1,"giants":19,"jaguars":30,"jets":20,"lions":8,"packers":9,"panthers":29,"patriots":17,"raiders":13,"rams":14,"ravens":33,"saints":18,"seahawks":26,"steelers":23,"texans":34,"titans":10,"vikings":16,"49ers":25},"NHL":{"ducks":32,"coyotes":53,"bruins":1,"sabres":7,"flames":20,"hurricanes":12,"blackhawks":4,"avalanche":21,"blue jackets":29,"stars":25,"red wings":17,"oilers":22,"panthers":13,"kings":26,"wild":30,"canadiens":8,"predators":18,"devils":1,"islanders":11,"rangers":10,"senators":9,"flyers":6,"penguins":5,"sharks":28,"kraken":68,"blues":19,"lightning":14,"maple leafs":10,"canucks":20,"golden knights":68,"capitals":15,"jets":52,"mammoth":70},"CFB":{"alabama":333,"georgia":61,"tennessee":2633,"arkansas":8,"penn state":213,"usc":30,"virginia":258,"syracuse":183,"utah":254,"kansas":2305,"toledo":2649,"buffalo":2084,"wyoming":2751,"san jose state":23,"missouri state":2623,"new mexico state":166,"fiu":2226,"fresno state":278,"boise state":68},"EPL":{"arsenal":359,"aston villa":362,"bournemouth":349,"chelsea":363,"leeds":357,"brighton":331,"sunderland":350,"crystal palace":384,"ipswich":336,"liverpool":364,"man united":360,"hull":334,"coventry":338}}[sport];
+var k=t.toLowerCase();var i=id&&id[k];
+if(i)return "https://a.espncdn.com/i/teamlogos/"+(sport==="CFB"?"ncaa":sport.toLowerCase())+"/500/"+i+".png";
+return null;}
+function teamImg(t,sport){var u=espnLogo(t,sport);if(u)return '<img src="'+u+'" onerror="this.style.display=\'none\'" alt="">';return '<img src="'+logo(t).split('"')[0]+'" onerror="this.style.display=\'none\'" alt="">';}
+
+function toProb(ml){var s=String(ml).trim();if(s[0]==="+"){var v=parseFloat(s.slice(1));return 100/(v+100)}var v=parseFloat(s.slice(1));return v/(v+100)}
+
+function drawChart(hist, away, home){
+var svg=document.getElementById("chart");if(!svg)return;
+var W=svg.clientWidth||500,H=260,pl=44,pr=14,pt=12,pb=30;
+svg.setAttribute("viewBox","0 0 "+W+" "+H);
+if(!hist||hist.length===0){svg.innerHTML='<text x="'+(W/2)+'" y="'+(H/2)+'" fill="#5b6577" text-anchor="middle" font-size="13">No odds data yet — snapshots start with the next update.</text>';return}
+var pts=hist.map(function(h){return{t:h.t,ap:toProb(h.away_ml),hp:toProb(h.home_ml)}});
+var all=pts.map(function(p){return p.ap}).concat(pts.map(function(p){return p.hp}));
+var mn=Math.min.apply(null,all),mx=Math.max.apply(null,all);
+var pad=Math.max(0.04,(mx-mn)*0.3);mn-=pad;mx+=pad;
+function X(i){return hist.length===1?pl+(W-pl-pr)/2:pl+i*(W-pl-pr)/(hist.length-1)}
+function Y(p){return pt+(1-(p-mn)/(mx-mn))*(H-pt-pb)}
+var s='<line x1="'+pl+'" y1="'+pt+'" x2="'+pl+'" y2="'+(H-pb)+'" stroke="#2a3242"/>';
+for(var g=0;g<=4;g++){var pv=mn+(mx-mn)*g/4;var y=Y(pv);s+='<line x1="'+pl+'" y1="'+y+'" x2="'+(W-pr)+'" y2="'+y+'" stroke="#1e2530"/><text x="'+(pl-6)+'" y="'+(y+4)+'" fill="#5b6577" font-size="10" text-anchor="end">'+Math.round(pv*100)+'%</text>'}
+function line(key,color){var d=pts.map(function(p,i){return (i?"L":"M")+X(i).toFixed(1)+" "+Y(p[key]).toFixed(1)}).join(" ");return '<path d="'+d+'" fill="none" stroke="'+color+'" stroke-width="2.5"/>'}
+s+=line("ap","#4f8cff")+line("hp","#f5a623");
+pts.forEach(function(p,i){s+='<circle cx="'+X(i).toFixed(1)+'" cy="'+Y(p.ap).toFixed(1)+'" r="4" fill="#4f8cff"/><circle cx="'+X(i).toFixed(1)+'" cy="'+Y(p.hp).toFixed(1)+'" r="4" fill="#f5a623"/>'});
+hist.forEach(function(h,i){var lbl=String(h.t).slice(5,10).replace("-","/");s+='<text x="'+X(i).toFixed(1)+'" y="'+(H-pb+18)+'" fill="#5b6577" font-size="10" text-anchor="middle">'+lbl+'</text>'});
+s+='<text x="'+(W-pr)+'" y="'+(pt+4)+'" fill="#4f8cff" font-size="11" text-anchor="end" font-weight="700">'+away+'</text>';
+s+='<text x="'+(W-pr)+'" y="'+(pt+20)+'" fill="#f5a623" font-size="11" text-anchor="end" font-weight="700">'+home+'</text>';
+svg.innerHTML=s;
+}
+
+function splitBar(label, aLab, bLab, aPct){
+if(aPct==null)return '<div class="split"><div class="lab"><span>'+label+'</span></div><p class="pending">Public data pending — fills in with the next update.</p></div>';
+var b=100-aPct;
+return '<div class="split"><div class="lab"><span>'+aLab+'</span><span>'+bLab+'</span></div>'+
+'<div class="bar"><div class="a" style="width:'+aPct+'%"></div><div class="b" style="width:'+b+'%"></div></div>'+
+'<div class="pct"><span>'+aPct+'%</span><span>'+b+'%</span></div></div>';
+}
+
+async function main(){
+var id=new URLSearchParams(location.search).get("id");
+var res=await fetch("games.json");var data=await res.json();
+var g=(data.games||[]).filter(function(x){return x.id===id})[0];
+var el=document.getElementById("content");
+if(!g){el.innerHTML='<div class="card"><p class="pending">Game not found.</p></div>';return}
+document.title=g.away+" at "+g.home+" | PaperBook";
+var o=g.odds;
+var wx=g.weather?g.weather.temp_f+"°F · "+g.weather.condition+" · wind "+g.weather.wind_mph+" mph · "+g.weather.precip_pct+"% precip":(g.outdoor?"Forecast pending":"Indoor venue — weather N/A");
+var sp=g.splits||{};
+var news=(g.news||[]).map(function(n){return '<div class="news-item"><div class="t">'+n.t+'</div><div class="x">'+n.text+'</div></div>'}).join("")||'<p class="pending">No news yet — injuries and lineup updates appear here.</p>';
+el.innerHTML=
+'<div class="ghead"><div class="teams">'+
+'<div class="t">'+teamImg(g.away,g.sport)+'<b>'+g.away+'</b>'+(o?'<span style="color:#8b93a3">'+o.away_ml+'</span>':'')+'</div>'+
+'<div class="at">at</div>'+
+'<div class="t">'+teamImg(g.home,g.sport)+'<b>'+g.home+'</b>'+(o?'<span style="color:#8b93a3">'+o.home_ml+'</span>':'')+'</div>'+
+'</div><div class="meta">'+g.date_label+' · '+g.time+' ET'+(g.venue?'<br><span class="venue">'+g.venue+'</span> · '+g.city:'')+'</div></div>'+
+'<div class="grid">'+
+'<div class="card"><h3>Moneyline movement</h3><svg id="chart"></svg><div class="chart-note">Implied win probability from DraftKings moneyline, snapshotted on each site update. Not real-time.</div></div>'+
+'<div class="card"><h3>Where the public money is</h3>'+
+splitBar("Spread",g.away,g.home,sp.spread_away)+
+splitBar("Moneyline",g.away,g.home,sp.ml_away)+
+splitBar("Total","Over "+(sp.total_line||""),"Under "+(sp.total_line||""),sp.over_pct)+
+'</div></div>'+
+'<div class="grid">'+
+'<div class="card"><h3>Game details</h3>'+
+'<div class="detail-row"><span class="k">Venue</span><span class="v">'+(g.venue||"—")+'</span></div>'+
+'<div class="detail-row"><span class="k">Location</span><span class="v">'+(g.city||"—")+'</span></div>'+
+'<div class="detail-row"><span class="k">Weather at kickoff</span><span class="v">'+wx+'</span></div>'+
+'<div class="detail-row"><span class="k">Sport</span><span class="v">'+g.sport+'</span></div>'+
+'</div>'+
+'<div class="card"><h3>News & injuries</h3>'+news+'</div>'+
+'</div>';
+drawChart(g.history,g.away,g.home);
+window.addEventListener("resize",function(){drawChart(g.history,g.away,g.home)});
+}
+main();
+</script>
+</body>
+</html>
